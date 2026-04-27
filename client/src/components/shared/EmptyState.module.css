@@ -1,0 +1,18 @@
+.empty {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--ink-3);
+  display: grid;
+  gap: var(--sp-1);
+  justify-items: center;
+  min-height: 120px;
+  padding: var(--sp-6);
+  text-align: center;
+}
+
+.empty strong {
+  color: var(--ink);
+  font-family: var(--font-head);
+}

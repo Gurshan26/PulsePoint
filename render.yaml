@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: pulsepoint
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: NODE_ENV=production node server/src/index.js
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /health
+    disk:
+      name: pulsepoint-data
+      mountPath: /opt/render/project/src/server/data
+      sizeGB: 1

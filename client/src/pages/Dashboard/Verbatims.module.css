@@ -1,0 +1,83 @@
+.page {
+  display: grid;
+  gap: var(--sp-5);
+}
+
+.controls,
+.resultTop {
+  align-items: center;
+  display: flex;
+  gap: var(--sp-4);
+  justify-content: space-between;
+}
+
+.controls p,
+.resultTop span {
+  color: var(--ink-3);
+}
+
+.filterPanel,
+.results {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-5);
+}
+
+.filterPanel {
+  display: grid;
+  gap: var(--sp-3);
+  grid-template-columns: minmax(240px, 1fr) 190px 220px;
+}
+
+.filterPanel select,
+.search {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--ink-2);
+  min-height: 42px;
+}
+
+.search {
+  align-items: center;
+  display: flex;
+  gap: var(--sp-2);
+  padding: 0 var(--sp-3);
+}
+
+.search input {
+  border: 0;
+  color: var(--ink);
+  outline: none;
+  width: 100%;
+}
+
+.filterPanel select {
+  padding: 0 var(--sp-3);
+}
+
+.list {
+  display: grid;
+  gap: var(--sp-3);
+  margin-top: var(--sp-4);
+}
+
+.pagination {
+  display: flex;
+  gap: var(--sp-2);
+  justify-content: flex-end;
+  margin-top: var(--sp-4);
+}
+
+@media (max-width: 860px) {
+  .filterPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .controls,
+  .resultTop {
+    align-items: start;
+    flex-direction: column;
+  }
+}

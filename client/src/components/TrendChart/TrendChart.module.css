@@ -1,0 +1,32 @@
+.wrap {
+  min-height: 220px;
+  width: 100%;
+}
+
+.compact {
+  min-height: 170px;
+}
+
+.tooltip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-tooltip);
+  min-width: 150px;
+  padding: var(--sp-3);
+}
+
+.tooltipPeriod {
+  color: var(--ink-3);
+  font-size: 0.82rem;
+}
+
+.tooltipValue {
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.tooltipSub {
+  color: var(--ink-3);
+  font-size: 0.82rem;
+}

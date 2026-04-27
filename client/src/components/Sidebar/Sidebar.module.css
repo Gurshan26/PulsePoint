@@ -1,0 +1,143 @@
+.sidebar {
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+  height: 100vh;
+  left: 0;
+  padding: var(--sp-5);
+  position: fixed;
+  top: 0;
+  width: var(--sidebar-w);
+  z-index: 20;
+}
+
+.brand {
+  align-items: center;
+  display: flex;
+  gap: var(--sp-3);
+}
+
+.brandDot {
+  background: linear-gradient(135deg, var(--violet), var(--blue));
+  border-radius: 999px;
+  height: 16px;
+  width: 16px;
+}
+
+.brandName {
+  color: var(--ink);
+  font-family: var(--font-head);
+  font-size: 1.16rem;
+  font-weight: 800;
+}
+
+.datasetInfo {
+  align-items: start;
+  background: var(--violet-bg);
+  border: 1px solid #DDD6FE;
+  border-radius: var(--r-md);
+  color: var(--violet);
+  display: grid;
+  gap: var(--sp-2);
+  grid-template-columns: auto 1fr;
+  padding: var(--sp-3);
+}
+
+.datasetName,
+.orgName {
+  display: block;
+}
+
+.datasetName {
+  color: var(--ink);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.orgName {
+  color: var(--ink-3);
+  font-size: 0.82rem;
+}
+
+.navSection {
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.sectionLabel {
+  color: var(--ink-4);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  margin: 0 0 var(--sp-1) var(--sp-2);
+  text-transform: uppercase;
+}
+
+.navItem {
+  align-items: center;
+  border-radius: var(--r-md);
+  color: var(--ink-3);
+  display: flex;
+  gap: var(--sp-3);
+  min-height: 40px;
+  padding: 0 var(--sp-3);
+}
+
+.navItem:hover {
+  background: var(--surface-2);
+  text-decoration: none;
+}
+
+.navActive {
+  background: var(--blue-bg);
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.sidebarFooter {
+  border-top: 1px solid var(--border);
+  color: var(--ink-3);
+  display: grid;
+  font-size: 0.84rem;
+  gap: var(--sp-2);
+  margin-top: auto;
+  padding-top: var(--sp-4);
+}
+
+.backLink {
+  align-items: center;
+  color: var(--violet);
+  display: inline-flex;
+  gap: var(--sp-1);
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    height: auto;
+    position: relative;
+    width: 100%;
+  }
+
+  .navSection {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    overflow-x: auto;
+  }
+
+  .sectionLabel,
+  .datasetInfo,
+  .sidebarFooter {
+    display: none;
+  }
+
+  .navItem {
+    justify-content: center;
+    min-width: 46px;
+  }
+
+  .navItem span {
+    display: none;
+  }
+}

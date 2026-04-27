@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  gap: var(--sp-4);
+}
+
+.bar {
+  background: var(--surface-2);
+  border-radius: 999px;
+  display: flex;
+  height: 18px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.segment {
+  min-width: 2px;
+  transition: width 0.25s ease;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+.legendItem {
+  align-items: center;
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 800;
+  gap: var(--sp-2);
+}
+
+.dot {
+  border-radius: 999px;
+  height: 8px;
+  width: 8px;
+}
+
+.count {
+  color: var(--ink-3);
+  font-weight: 700;
+}

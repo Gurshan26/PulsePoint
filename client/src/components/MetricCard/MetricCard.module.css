@@ -1,0 +1,74 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-direction: column;
+  min-height: 190px;
+  padding: var(--sp-5);
+}
+
+.header,
+.valueRow {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.label {
+  color: var(--ink-3);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.valueRow {
+  margin-top: var(--sp-5);
+}
+
+.value {
+  font-size: 2.35rem;
+  line-height: 1;
+}
+
+.delta {
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+.deltaUp {
+  background: var(--positive-bg);
+  color: var(--positive);
+}
+
+.deltaDown {
+  background: var(--negative-bg);
+  color: var(--negative);
+}
+
+.subtitle {
+  color: var(--ink-3);
+  font-size: 0.9rem;
+  margin-top: var(--sp-3);
+}
+
+.sparkline {
+  align-items: end;
+  border-radius: var(--r-sm);
+  display: flex;
+  gap: 3px;
+  height: 32px;
+  margin-top: auto;
+  padding: 7px;
+}
+
+.sparkline span {
+  border-radius: 999px;
+  flex: 1;
+  opacity: 0.55;
+}

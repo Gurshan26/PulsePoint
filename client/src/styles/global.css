@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  --page: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F4;
+  --ink: #111827;
+  --ink-2: #374151;
+  --ink-3: #6B7280;
+  --ink-4: #9CA3AF;
+  --border: #EBEBEB;
+  --border-2: #D1D5DB;
+  --positive: #059669;
+  --positive-bg: #ECFDF5;
+  --positive-mid: #10B981;
+  --negative: #E11D48;
+  --negative-bg: #FFF1F2;
+  --negative-mid: #F43F5E;
+  --neutral: #D97706;
+  --neutral-bg: #FFFBEB;
+  --neutral-mid: #F59E0B;
+  --violet: #7C3AED;
+  --violet-bg: #F5F3FF;
+  --violet-mid: #8B5CF6;
+  --violet-dark: #5B21B6;
+  --blue: #2563EB;
+  --blue-bg: #EFF6FF;
+  --blue-mid: #3B82F6;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sidebar-w: 220px;
+  --topbar-h: 64px;
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --shadow-modal: 0 25px 50px rgba(0, 0, 0, 0.12);
+  --shadow-tooltip: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-family: var(--font-head);
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.375rem;
+  font-weight: 650;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--violet);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code,
+.mono {
+  background: var(--surface-2);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 2px 6px;
+}
+
+.metric-number {
+  font-family: var(--font-head);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.56;
+    transform: scale(1.4);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-in {
+  animation: fadeUp 0.28s ease both;
+}
+
+.count-in {
+  animation: countUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --sidebar-w: 100%;
+    --topbar-h: auto;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+  }
+}

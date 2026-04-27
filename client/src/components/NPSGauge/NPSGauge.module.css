@@ -1,0 +1,76 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  min-height: 190px;
+  padding: var(--sp-5);
+}
+
+.label {
+  color: var(--ink-3);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gaugeWrap {
+  display: grid;
+  justify-content: center;
+  margin-top: var(--sp-2);
+  position: relative;
+}
+
+.canvas {
+  display: block;
+  height: 140px;
+  max-width: 100%;
+  width: 240px;
+}
+
+.scoreOverlay {
+  align-items: center;
+  bottom: 6px;
+  display: grid;
+  justify-items: center;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.score {
+  font-size: 2.45rem;
+  line-height: 1;
+}
+
+.scoreLabel {
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.breakdown {
+  display: grid;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}
+
+.bItem {
+  align-items: center;
+  color: var(--ink-2);
+  display: grid;
+  font-size: 0.88rem;
+  gap: var(--sp-2);
+  grid-template-columns: 10px 1fr auto;
+}
+
+.bDot {
+  border-radius: 999px;
+  height: 8px;
+  width: 8px;
+}
+
+.totalLabel {
+  color: var(--ink-3);
+  font-size: 0.86rem;
+  margin-top: var(--sp-3);
+}

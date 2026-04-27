@@ -1,0 +1,152 @@
+.page {
+  display: grid;
+  gap: var(--sp-5);
+}
+
+.controls {
+  align-items: end;
+  display: flex;
+  gap: var(--sp-4);
+  justify-content: space-between;
+}
+
+.controls p {
+  color: var(--ink-3);
+  margin-top: var(--sp-1);
+}
+
+.controlsRight {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+.kpiRow {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.midRow,
+.bottomRow {
+  display: grid;
+  gap: var(--sp-4);
+}
+
+.midRow {
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.9fr);
+}
+
+.bottomRow {
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.95fr);
+}
+
+.panel,
+.themesPanel,
+.executivePanel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-5);
+}
+
+.panelHeader {
+  align-items: start;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-4);
+}
+
+.panelHeader span {
+  color: var(--ink-3);
+  font-size: 0.82rem;
+}
+
+.verbatimList {
+  display: grid;
+  gap: var(--sp-3);
+}
+
+.tagCloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.themeTag {
+  align-items: center;
+  background: var(--blue-bg);
+  border: 1px solid #DBEAFE;
+  border-radius: 999px;
+  color: var(--blue);
+  display: inline-flex;
+  gap: var(--sp-2);
+  font-weight: 800;
+  padding: 7px 11px;
+}
+
+.themeTag strong {
+  color: var(--ink-3);
+  font-size: 0.76em;
+}
+
+.executivePanel {
+  background: linear-gradient(180deg, var(--surface) 0%, var(--violet-bg) 100%);
+  display: grid;
+  gap: var(--sp-4);
+}
+
+.executivePanel > span {
+  color: var(--violet);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.executiveGrid {
+  display: grid;
+  gap: var(--sp-3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.executiveGrid p {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--ink-2);
+  padding: var(--sp-4);
+}
+
+.executivePanel strong {
+  color: var(--violet-dark);
+}
+
+.error {
+  color: var(--negative);
+}
+
+@media (max-width: 1120px) {
+  .kpiRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .midRow,
+  .bottomRow,
+  .executiveGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .controls {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .kpiRow {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,53 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--neutral);
+  border-radius: var(--r-md);
+  display: grid;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+}
+
+.compact {
+  padding: var(--sp-3);
+}
+
+.text {
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.meta,
+.themes {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.sentimentChip,
+.theme {
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 3px 8px;
+}
+
+.touchpoint,
+.date,
+.npsScore {
+  color: var(--ink-3);
+  font-size: 0.82rem;
+}
+
+.npsScore {
+  color: var(--ink-2);
+  font-weight: 800;
+}
+
+.theme {
+  background: var(--violet-bg);
+  color: var(--violet);
+}

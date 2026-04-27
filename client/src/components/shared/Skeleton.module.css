@@ -1,0 +1,7 @@
+.skeleton {
+  background: linear-gradient(90deg, #F4F4F4 0%, #FFFFFF 50%, #F4F4F4 100%);
+  background-size: 200% 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  animation: shimmer 1.2s linear infinite;
+}

@@ -1,0 +1,154 @@
+.page {
+  display: grid;
+  gap: var(--sp-5);
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  gap: var(--sp-4);
+  justify-content: space-between;
+}
+
+.controls p {
+  color: var(--ink-3);
+}
+
+.actions {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.actions select {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--ink);
+  min-height: 38px;
+  padding: 0 var(--sp-3);
+}
+
+.grid {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+}
+
+.summaryPanel,
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-5);
+}
+
+.summaryPanel {
+  background: linear-gradient(180deg, var(--surface) 0%, var(--blue-bg) 100%);
+  display: grid;
+  gap: var(--sp-4);
+}
+
+.summaryPanel > span {
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.summaryPanel ul {
+  color: var(--ink-2);
+  margin: 0;
+  padding-left: var(--sp-5);
+}
+
+.summaryPanel strong {
+  color: var(--blue);
+}
+
+.issueList,
+.clusterList,
+.savedList {
+  display: grid;
+  gap: var(--sp-3);
+  margin-top: var(--sp-4);
+}
+
+.issue {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  display: grid;
+  gap: var(--sp-3);
+  grid-template-columns: 38px 1fr;
+  padding: var(--sp-4);
+}
+
+.issue > span {
+  color: var(--violet);
+  font-family: var(--font-head);
+  font-weight: 800;
+}
+
+.issue p,
+.cluster p,
+.issue em,
+.saved span {
+  color: var(--ink-3);
+  font-size: 0.9rem;
+}
+
+.issue em {
+  display: block;
+  font-style: normal;
+  margin-top: var(--sp-2);
+}
+
+.cluster {
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--neutral);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+}
+
+.cluster[data-sentiment='positive'] {
+  border-left-color: var(--positive);
+}
+
+.cluster[data-sentiment='negative'] {
+  border-left-color: var(--negative);
+}
+
+.cluster div,
+.saved {
+  align-items: center;
+  display: flex;
+  gap: var(--sp-2);
+  justify-content: space-between;
+}
+
+.cluster span {
+  color: var(--ink-3);
+  font-size: 0.82rem;
+}
+
+.saved {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+}
+
+.saved strong {
+  text-transform: capitalize;
+}
+
+@media (max-width: 980px) {
+  .grid,
+  .controls {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+}

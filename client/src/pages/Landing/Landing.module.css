@@ -1,0 +1,148 @@
+.page {
+  display: grid;
+  gap: var(--sp-8);
+  margin: 0 auto;
+  max-width: 1120px;
+  min-height: 100vh;
+  padding: var(--sp-10) var(--sp-6);
+}
+
+.header {
+  align-items: end;
+  display: grid;
+  gap: var(--sp-6);
+  grid-template-columns: 220px 1fr auto;
+}
+
+.brand {
+  align-items: center;
+  display: flex;
+  gap: var(--sp-3);
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.brandDot {
+  background: linear-gradient(135deg, var(--violet), var(--blue));
+  border-radius: 999px;
+  height: 18px;
+  width: 18px;
+}
+
+.header h1 {
+  font-size: 2.4rem;
+}
+
+.header p {
+  color: var(--ink-3);
+  max-width: 680px;
+  margin-top: var(--sp-2);
+}
+
+.datasetGrid {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.datasetCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  display: grid;
+  gap: var(--sp-3);
+  min-height: 190px;
+  padding: var(--sp-5);
+  text-align: left;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.datasetCard:hover {
+  border-color: var(--violet);
+  transform: translateY(-2px);
+}
+
+.industry {
+  color: var(--violet);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.datasetCard strong {
+  color: var(--ink);
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+}
+
+.datasetCard p {
+  color: var(--ink-3);
+}
+
+.cardMeta {
+  border-top: 1px solid var(--border);
+  color: var(--ink-3);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.84rem;
+  gap: var(--sp-3);
+  margin-top: auto;
+  padding-top: var(--sp-3);
+}
+
+.authForm,
+.createForm {
+  display: grid;
+  gap: var(--sp-3);
+}
+
+.authDataset {
+  align-items: center;
+  background: var(--violet-bg);
+  border: 1px solid #DDD6FE;
+  border-radius: var(--r-md);
+  color: var(--violet);
+  display: flex;
+  gap: var(--sp-3);
+  padding: var(--sp-3);
+}
+
+.authDataset span {
+  color: var(--ink-3);
+  display: block;
+  font-size: 0.84rem;
+}
+
+.authForm input,
+.createForm input,
+.createForm textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--ink);
+  min-height: 42px;
+  padding: 0 var(--sp-3);
+}
+
+.createForm textarea {
+  padding-top: var(--sp-3);
+  resize: vertical;
+}
+
+.error {
+  color: var(--negative);
+  font-weight: 800;
+}
+
+@media (max-width: 860px) {
+  .header {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+}

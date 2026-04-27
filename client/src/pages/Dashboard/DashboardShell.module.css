@@ -1,0 +1,27 @@
+.shell {
+  min-height: 100vh;
+}
+
+.main {
+  margin-left: var(--sidebar-w);
+  min-height: 100vh;
+}
+
+.content {
+  padding: var(--sp-6);
+}
+
+.error {
+  color: var(--negative);
+  padding: var(--sp-8);
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+  }
+
+  .content {
+    padding: var(--sp-4);
+  }
+}

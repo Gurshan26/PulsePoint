@@ -1,0 +1,34 @@
+.banner {
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  display: flex;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+}
+
+.critical {
+  background: var(--negative-bg);
+  border-color: #fecdd3;
+  color: var(--negative);
+}
+
+.warning {
+  background: var(--neutral-bg);
+  border-color: #fde68a;
+  color: var(--neutral);
+}
+
+.content {
+  display: grid;
+  gap: var(--sp-1);
+}
+
+.content strong {
+  color: var(--ink);
+}
+
+.content span {
+  color: var(--ink-2);
+  font-size: 0.9rem;
+}

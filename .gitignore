@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+server/data/
+server/tests/tmp-test.db*
+test-results/
+.vercel/
+*.log
+.DS_Store
+coverage/
+.vercel

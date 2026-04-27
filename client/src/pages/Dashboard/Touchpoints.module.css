@@ -1,0 +1,29 @@
+.page {
+  display: grid;
+  gap: var(--sp-5);
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  gap: var(--sp-4);
+  justify-content: space-between;
+}
+
+.controls p {
+  color: var(--ink-3);
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-5);
+}
+
+@media (max-width: 720px) {
+  .controls {
+    align-items: start;
+    flex-direction: column;
+  }
+}
