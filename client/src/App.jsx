@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Landing from './pages/Landing/Landing';
 import DashboardShell from './pages/Dashboard/DashboardShell';
 import Overview from './pages/Dashboard/Overview';
@@ -14,6 +14,7 @@ export default function App() {
     <ErrorBoundary>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/demo" element={<Navigate to="/datasets/demo-cx" replace />} />
         <Route path="/datasets/:datasetId" element={<DashboardShell />}>
           <Route index element={<Overview />} />
           <Route path="trends" element={<Trends />} />

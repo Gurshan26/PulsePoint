@@ -33,7 +33,8 @@ If the key is absent, PulsePoint runs in rich mock-AI mode.
 Seeded automatically on first server start:
 
 - Dataset: `Retail Banking CX Study`
-- Viewer passcode: `pulse2024`
+- Open demo without a passcode: `/demo`
+- Viewer passcode for explicit access: `pulse2024`
 - Admin passcode: `admin2024`
 
 ## Test

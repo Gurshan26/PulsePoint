@@ -1,4 +1,4 @@
-import { Plus, ShieldCheck } from 'lucide-react';
+import { Eye, Plus, ShieldCheck } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/shared/Button';
@@ -55,6 +55,17 @@ export default function Landing() {
     setSelected(data.dataset);
   };
 
+  const openDataset = (dataset) => {
+    if (dataset.id === 'demo-cx') {
+      localStorage.setItem(`pulsepoint:${dataset.id}:role`, 'demo');
+      navigate(`/datasets/${dataset.id}`);
+      return;
+    }
+    setPasscode('');
+    setAuthError('');
+    setSelected(dataset);
+  };
+
   return (
     <main className={styles.page}>
       <section className={styles.header}>
@@ -79,8 +90,9 @@ export default function Landing() {
           </>
         ) : datasets.length ? (
           datasets.map((dataset) => (
-            <button key={dataset.id} type="button" className={styles.datasetCard} onClick={() => setSelected(dataset)}>
+            <button key={dataset.id} type="button" className={styles.datasetCard} onClick={() => openDataset(dataset)}>
               <span className={styles.industry}>{dataset.industry}</span>
+              {dataset.id === 'demo-cx' && <span className={styles.demoBadge}>Demo: no passcode</span>}
               <strong>{dataset.name}</strong>
               <p>{dataset.description}</p>
               <div className={styles.cardMeta}>
@@ -88,6 +100,12 @@ export default function Landing() {
                 <span>{formatNumber(dataset.response_count)} responses</span>
                 <span>{formatDate(dataset.date_range_end)}</span>
               </div>
+              {dataset.id === 'demo-cx' && (
+                <span className={styles.openDemo}>
+                  <Eye size={16} aria-hidden="true" />
+                  Open demo
+                </span>
+              )}
             </button>
           ))
         ) : (
